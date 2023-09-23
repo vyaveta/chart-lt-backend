@@ -4,6 +4,7 @@ import { Request, Response } from 'express';
 
 export const getData = (req: Request, res: Response) => {
     try{
+        console.log(req.body, 'is  the req body')
         return res.status(200).json(DATA_RECORDS)
     }catch(error: any){
         console.log("[GET_DATA]", error?.message)
